@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Log in</h1>
+<p>If you don't have an account, you may <a href="/register">register</a> for one</p>
+<form action="/login" method="post">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input name="email" class="form-control" type="email" value="{{ email }}">
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input name="password" class="form-control" type="password">
+    </div>
+    <input type="submit" value="Login" class="btn btn-default">
+</form>
+{% endblock %}
